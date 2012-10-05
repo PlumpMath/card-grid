@@ -2,9 +2,9 @@
   (:use [quil.core])
   (:gen-class))
 
-(def grid-width 3)
+(def grid-width 4)
 
-(def grid-height 3)
+(def grid-height 4)
 
 (def content
   [{:title "Card one" :text "This is some text below the title"}
@@ -13,7 +13,7 @@
    {:title "A new card"}])
 
 (defn get-content [content x y]
-  (let [i (+ x (* y grid-height))]
+  (let [i (+ x (* y grid-width))]
     (get content i)))
 
 (defn setup [])
