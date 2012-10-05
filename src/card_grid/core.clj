@@ -10,7 +10,8 @@
   [{:title "Card one" :text "This is some text below the title"}
    {:title "Card two" :text "Hej!"}
    {:title "Card threeeee"}
-   {:title "A new card"}])
+   {:title "A new card"}
+   {:title "55555"}])
 
 (defn get-content [content x y]
   (let [i (+ x (* y grid-width))]
@@ -41,13 +42,13 @@
 	        (render-card rect-x rect-y w h (get-content content x y))))))
 
 (defn draw []
-  (background 240 240 230)
+  (background 255 255 255)
   (grid grid-width grid-height))
 
 (defn start []
   (defsketch example
           :title "Card Grid"
-          :size [600 800]
+          :size [595 842]
           :setup setup
           :draw draw))
 
